@@ -1,0 +1,128 @@
+/* used to keep children in the right place inside the parent */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+ul {
+	margin: 0;
+}
+
+/* font awezome conf */
+i.fa {
+	padding-right: 10px;
+	font-weight: bold;
+}
+
+i.fa-angle-right {
+	padding-left: 20px;
+	font-weight: bold;
+}
+
+i.sect {
+	padding-left: 0;
+	font-weight: bold;
+}
+
+/* header */
+nav#navbar {
+/*  flex:
+	0 = don't grow (shorthand for flex-grow)
+    0 = don't shrink (shorthand for flex-shrink)
+    230px = start at 230px (shorthand for flex-basis) */
+	flex: 0 0 315px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 100vh;
+}
+
+nav#navbar header {
+	height: 50px;
+	font-size: 25px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(8, 93, 116);
+	color: white;
+}
+
+nav#navbar ul {
+	height: 100vh;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto; /* show when necessary */
+	padding: 0;
+	font-size: 1.1em;
+	background-color: rgb(20, 115, 140);
+	color: white;
+}
+
+nav#navbar ul { list-style: none; }
+nav#navbar ul li { height: 40px; }
+nav#navbar ul li a {  text-decoration:none; color:white; background-color:rgb(20, 115, 140); display: flex; align-items: center; 
+ border-bottom-style:solid; border-bottom-width:1px; border-bottom-color:white; padding-left:10px; cursor:pointer; height: 100%; }
+nav#navbar ul li a:hover { color:#FFFFFF; background-color: rgb(8, 93, 116) }
+nav#navbar ul li a strong { margin-right:10px; }
+
+/* main */
+main#main-doc {
+	overflow: scroll;
+	overflow-x: hidden;
+	height: 100vh;
+	width: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 10px;
+	-moz-box-shadow:    inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow:         inset 0 0 10px #000000;
+	color: #4d4e53;
+	font-size: 1.1em;
+}
+
+main#main-doc header {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-top: 40px;
+	color: rgba(92,154,204,1);
+	border-bottom: 1px solid rgba(92,154,204,1);
+}
+
+pre {
+	background-color: #ededed;
+	padding: 20px;
+	border-radius: 8px;
+}
+
+main section:last-of-type {
+  margin-bottom: 40px;
+}
+
+article ul li a {  text-decoration:none; color: #4d4e53; font-weight: bold; }
+
+@media (max-width: 700px){
+	
+	body {
+		font-family: 'Nunito', sans-serif;
+		margin: 0;
+		padding: 0;
+		flex-direction: column;
+	}
+
+	nav#navbar {
+		height: 300px;
+	}
+	
+	nav#navbar ul {
+		height: 300px;
+	}
+}
